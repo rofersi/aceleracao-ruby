@@ -19,18 +19,25 @@
 
 # Otimizando o método
 
+# def palindromo?(palavra)
+#   palavra = palavra.downcase
+#   palavra_reversa = ''
+#   indice = palavra.length
+
+#   until indice.zero?
+#     letra = palavra[indice - 1]
+#     palavra_reversa << letra
+#     indice -= 1
+#   end
+#   palavra_reversa == palavra  # retona a própria execusão.
+# end
+
+# Otimaizando de forma rubystica
+
 def palindromo?(palavra)
   palavra = palavra.downcase
-  palavra_reversa = ''
-  indice = palavra.length
-
-  until indice.zero?
-    letra = palavra[indice - 1]
-    palavra_reversa << letra
-    indice -= 1
-  end
-
-  palavra_reversa == palavra  # retona a própria execusão.
+  palavra_reversa = palavra.reverse
+  palavra_reversa == palavra
 end
 
 puts palindromo?('ovo')
